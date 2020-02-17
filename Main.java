@@ -95,16 +95,19 @@ class Main {
         return false;
     }
 
+    // Cheaks if there is a winner.
     public static boolean endGame() {
 
+        // Runs twice.
         for (int i = 0; i < 2; i++) {
 
+            // z = "X" in the first iteration, but z = "O" in the second iteration.".
             String z = "X";
-
             if (i == 1) {
                 z = "O";
             }
 
+            // A very long if statment.
             if (spaces[0] == z && spaces[1] == z && spaces[2] == z ||
 
                     spaces[3] == z && spaces[4] == z && spaces[5] == z ||
