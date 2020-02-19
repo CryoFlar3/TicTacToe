@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.print.attribute.standard.PrinterLocation;
+
 class Main {
 
     public static String[] spaces = { "0", "1", "2", "3", "4", "5", "6", "7", "8" };
@@ -68,6 +70,10 @@ class Main {
     // Prints board.
     public static void printBoard() {
 
+        for (int i = 0; i < 50; i++) {
+            System.out.println(" ");
+        }
+
         System.out.println("~===========~");
         System.out.println("{ " + spaces[0] + " | " + spaces[1] + " | " + spaces[2] + " }");
         System.out.println("|===+===+===|");
@@ -120,7 +126,13 @@ class Main {
 
                     spaces[1] == z && spaces[4] == z && spaces[7] == z ||
 
-                    spaces[2] == z && spaces[5] == z && spaces[8] == z) {
+                    spaces[2] == z && spaces[5] == z && spaces[8] == z ||
+                    
+                    ///////////////////
+                    
+                    spaces[0] == z && spaces[4] == z && spaces[8] == z ||
+
+                    spaces[2] == z && spaces[4] == z && spaces[6] == z) {
                 return true;
             }
         }
